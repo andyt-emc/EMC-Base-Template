@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="2.5" type="template" client="site" method="upgrade">
+	
+	<name>EMC Base Theme</name><!-- name the template -->
+	<creationDate>2017-03-28</creationDate><!-- the date your are beginn to code -->
+	<author>Andy Taylor</author><!-- your name (oops, I repeat myself) -->
+	<copyright>Copyright © 2017 ExtraMile Communications</copyright><!-- for who you are coding -->
+	<authorEmail>andy@extramilecommunications.com</authorEmail><!-- your email address -->
+	<authorUrl>https://www.extramilecommunications.com</authorUrl><!-- your url -->
+	<version>1.0.2</version><!-- give your template a number -->
+	<description><![CDATA[ 
+		<h1>EMC Base Theme</h1>
+		<p>A clean and basic Joomla template which utlises Gulp for an improved workflow.</p>
+		<p>Created by <a href="http://www.extramilecommunications.com" target="_blank">Andy | extramilecommunications.com</a>.</p>
+	]]></description><!-- change the description as you like -->
+	
+	<files><!-- no need to change -->
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>assets</folder>
+		<folder>node_modules</folder>
+		<folder>tpls</folder>
+		<filename>gulpfile.js</filename>
+		<filename>package.json</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>logic.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	<positions><!-- define the positions for modules here -->
+		<position>banner</position>
+		<position>menu</position>
+		<position>main</position>
+		<position>logo</position>
+		<position>breadcrumb</position>
+		<position>top1</position>
+		<position>top2</position>
+		<position>top3</position>
+		<position>top4</position>
+		<position>header1</position>
+		<position>header2</position>
+		<position>header3</position>
+		<position>header4</position>
+		<position>grid1</position>
+		<position>grid2</position>
+		<position>grid3</position>
+		<position>grid4</position>
+		<position>grid5</position>
+		<position>grid6</position>
+		<position>grid7</position>
+		<position>grid8</position>
+		<position>left</position>
+		<position>right</position>
+		<position>bottom1</position>
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>bottom4</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>	
+</extension>

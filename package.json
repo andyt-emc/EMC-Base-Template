@@ -1,0 +1,33 @@
+{
+  "name": "EMC_Website_Template",
+  "version": "1.0.0",
+  "description": "Starter template for use on all projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Taylor",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-ftp": "^1.1.0",
+    "gulp-image": "^2.7.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-version-number": "^0.1.6",
+    "imagemin": "^5.2.2",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "dependencies": {
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

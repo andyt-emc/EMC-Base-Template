@@ -1,0 +1,204 @@
+// General styles
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {	
+	color: @textCol;
+	background: @bodyCol;
+
+}
+
+#outerwrap {
+	position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+#innerwrap {
+	position: relative;
+  width: 100%;
+}
+
+.internal-container {
+	max-width: @containerMaxWidth;
+	width: @containerWidth;
+	margin: 0 auto;
+}
+
+
+// Typography
+h1, h2, h3, h4 {
+
+}
+
+p {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 700;
+	color: @linkCol;
+	transition: all .3s;
+
+	&:hover {
+		// color: @blue;
+	}
+}
+
+
+
+
+// Buttons and calls to action
+.btn {
+	display: inline-block;
+	padding: .3em 1em;
+	color: @btnCol;
+	background: @btnBgCol;
+	transition: background .3s ease-in-out;
+
+	&:hover {
+		background: darken(@btnBgCol, 5%);
+	}
+}
+
+// Form styling
+
+
+// Menu styling
+
+#navwrap {
+
+}
+
+#logo {
+
+}
+
+#menu {
+
+	ul {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			display: inline-block;
+
+			a, span {
+				display: block;
+				padding: .5em 1em;
+			}
+
+			&:first-child {
+				a, span {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+// mobile menu styles
+@media screen and (max-width: @bp_mobileMenu) {
+
+
+	#menu {
+
+		ul {
+			text-align: left;
+
+			li {
+				width: 100%;
+				display: block;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				&:first-child {
+					a, span {
+						padding-left: 5%;
+					}
+				}
+
+				a, span {
+					padding: 1em 5%;
+					text-decoration: none;
+				}
+			}
+		}
+	}//menu	
+} // end of mobile menu styling
+
+
+// Header
+
+#topwrap {
+	p {
+		margin-bottom: 0;
+		color: #fff;
+	}
+}
+
+// Category / Blog / News pages
+
+
+// Single article pages
+
+// Grid styling for example
+
+#topwrap {
+	padding: 4em 0 3em 0;
+}
+
+.moduletable {
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	min-height: 200px;
+	border-radius: 2px;
+	border: 1px solid #e0e0e0;
+
+	p {
+		margin-bottom: 0;
+	 	font-size: 2em;
+	 	color: #333;
+	 }
+}
+
+div[id*="wrap"] {
+	margin-bottom: 1em;
+
+	.internal-container {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+		> div {
+			flex-grow: 1;
+		}
+	}
+}
+
+#main {
+	flex-grow: 2;
+	> div {
+		display: inline-flex;
+		width: 100%;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		border-radius: 2px;
+    border: 1px solid #e0e0e0;
+	}
+}
+
+
+

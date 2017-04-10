@@ -1,8 +1,17 @@
-<?php defined( '_JEXEC' ) or die;
+<?php
+defined( '_JEXEC' ) or die;
+
+// 404 page redirect
+if (($this->error->getCode()) == '404') {
+  header("HTTP/1.0 404 Not Found");
+  echo file_get_contents(JURI::root().'error-404');
+  exit;
+}
 
 // variables
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument(); 
+$doc = JFactory::getDocument();
 $tpath = $this->baseurl.'/templates/'.$this->template;
 
 ?><!doctype html>
@@ -22,8 +31,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
         <?php echo htmlspecialchars($app->getCfg('sitename')); ?>
       </h1>
       <p>
-        <?php 
-          echo $this->error->getCode().' - '.$this->error->getMessage(); 
+        <?php
+          echo $this->error->getCode().' - '.$this->error->getMessage();
           if (($this->error->getCode()) == '404') {
             echo '<br />';
             echo JText::_('JERROR_LAYOUT_REQUESTED_RESOURCE_WAS_NOT_FOUND');
@@ -31,7 +40,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
         ?>
       </p>
       <p>
-        <?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?>: 
+        <?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?>:
         <a href="<?php echo $this->baseurl; ?>/"><?php echo JText::_('JERROR_LAYOUT_HOME_PAGE'); ?></a>.
       </p>
       <?php // render module mod_search

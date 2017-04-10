@@ -21,10 +21,7 @@
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>assets</folder>
-		<folder>node_modules</folder>
-		<folder>tpls</folder>
-		<filename>gulpfile.js</filename>
-		<filename>package.json</filename>
+		<folder>tpls</folder>		
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>

@@ -1,0 +1,619 @@
+// 404 Error styles
+
+// Configure colour and sizes etc. then set the layout style.
+// All font-sizes are defined here at full (desktop) size and scaled down for
+// mobile.
+
+// General variables
+// -----------------------------------------------------------------------------
+@contentWidth: 980px; // content container width
+@breakPointOne: 500px;
+@breakPointTwo: 1000px;
+
+// Images and pseudo-images
+// -----------------------------------------------------------------------------
+
+// Banner (404 header + image)
+@headerBGImage: url(../images/404/404-background.png);
+@headerColor: #fff;
+@headerColorNoImage: #dedede;
+@headerFontSize: 16.875em;
+
+// Watermark text (non-image versions)
+@watermarkContent: '404';
+@watermarkColor: #f8f8f8;
+@watermarkSize: 31.250em;
+
+// Content colours/sizes
+// -----------------------------------------------------------------------------
+
+// 'Whoops!' text
+@whoopsColor: blue;
+@whoopsSize: 2.250em;       // 36px
+@whoopsLineHeight: 1.111em; // 40px
+
+// Paragraph default colour
+@pColor: #c3c3c3;
+
+// 'Sorry' text
+@sorrySize: 1.500em;        // 24px
+@sorryLineHeight: 1.417em;  // 34px
+
+// 'Links' text
+@linksSize: 1.125em;        // 18px
+@linksLineHeight: 2.222em;  // 40px
+
+// Option Button text
+@buttonSize: 1em;           // 16px
+@buttonLineHeight: 1.5em;   // 24px
+@buttonBorderColor: @whoopsColor;
+@buttonTextColor: @whoopsColor;
+@buttonHoverColor:  @whoopsColor;
+@buttonTextColorHover: #fff;
+
+// Select active layout (uncomment one line from below)
+// -----------------------------------------------------------------------------
+.selectLayout {
+    .central-layout;
+    //.left-aligned-layout;
+    //.central-layout-no-image;
+    //.left-aligned-layout-no-image;
+}
+
+// Template
+// -----------------------------------------------------------------------------
+
+html.error-404 {
+    #mainWrap .zen-row {
+        margin: 0;
+    }
+    .zen-container {
+        width: 100%;
+        max-width: none;
+    }
+    .article-content {
+        position: relative;
+        .selectLayout;
+    }
+}
+
+// Layouts
+// -----------------------------------------------------------------------------
+.central-layout {
+    text-align: center;
+    div.banner {
+        .defaultBannerStyles;
+        h1, h2, h3, h4, h5, h6 {
+            color: @headerColor;
+            font-weight: bold;
+            font-size: @headerFontSize * 0.5;
+            line-height: 0.77em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        @media screen and (min-width: @breakPointOne) {
+            padding-top: 20em;
+            h1, h2, h3, h4, h5, h6 {
+                font-size: @headerFontSize * 0.75;
+            }
+        }
+        @media screen and (min-width: @breakPointTwo) {
+            padding-top: 25em;
+            h1, h2, h3, h4, h5, h6 {
+                font-size: @headerFontSize;
+            }
+        }
+    }
+    div.content {
+        width: 90%;
+        max-width: @contentWidth;
+        margin: auto;
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            &.whoops {
+                font-size: @whoopsSize * 0.75;
+                line-height: @whoopsLineHeight;
+                color: @whoopsColor;
+                padding-top: 2em;
+            }
+            &.sorry {
+                font-size: @sorrySize * 0.75;
+                line-height: @sorryLineHeight;
+                margin-bottom: 0.5em;
+                width: 70%;
+            }
+            &.links {
+                font-size: @linksSize * 0.75;
+                line-height: @linksLineHeight;
+            }
+            &.sorry, &.links {
+                color: @pColor;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                &.whoops {
+                    font-size: @whoopsSize * 0.87;
+                }
+                &.sorry {
+                    font-size: @sorrySize * 0.87;
+                    width: 60%;
+                }
+                &.links {
+                    font-size: @linksSize * 0.87;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                &.whoops {
+                    font-size: @whoopsSize;
+                }
+                &.sorry {
+                    font-size: @sorrySize;
+                    width: 35%;
+                }
+                &.links {
+                    font-size: @linksSize;
+                }
+            }
+        }
+        ul.options {
+            list-style-type: none;
+            padding-top: 1em;
+            margin-left: 0;
+            li {
+                display: block;
+                margin: 0.5em 0;
+                a {
+                    font-size: @buttonSize;
+                    line-height: @buttonLineHeight;
+                    font-weight: bold;
+                    .defaultButtonStyles;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                li {
+                    display: inline-block;
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+.left-aligned-layout {
+    text-align: left;
+    div.banner {
+        .defaultBannerStyles;
+        padding-left: 5%;
+        padding-right: 5%;
+        .container {
+            position: relative;
+            width: @contentWidth;
+            margin: 0 auto;
+            h1, h2, h3, h4, h5, h6 {
+                color: @headerColor;
+                font-weight: bold;
+                font-size: @headerFontSize * 0.5;
+                line-height: 0.8em;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                padding-top: 20em;
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: @headerFontSize * 0.75;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                padding-top: 25em;
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: @headerFontSize;
+                }
+            }
+        }
+    }
+    div.content {
+        width: 90%;
+        max-width: @contentWidth;
+        margin: auto;
+        p {
+            &.whoops {
+                color: @whoopsColor;
+                font-size: @whoopsSize * 0.75;
+                line-height: @whoopsLineHeight;
+                padding-top: 2em;
+            }
+            &.sorry, &.links {
+                color: @pColor;
+            }
+            &.sorry {
+                font-size: @sorrySize * 0.75;
+                line-height: @sorryLineHeight;
+                margin-bottom: 0.5em;
+            }
+            &.links {
+                font-size: @linksSize * 0.75;
+                line-height: @linksLineHeight;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                &.whoops {
+                    font-size: @whoopsSize * 0.87;
+                }
+                &.sorry {
+                    font-size: @sorrySize * 0.87;
+                    width: 60%;
+                }
+                &.links {
+                    font-size: @linksSize * 0.87;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                &.whoops {
+                    font-size: @whoopsSize;
+                }
+                &.sorry {
+                    font-size: @sorrySize;
+                    width: 35%;
+                }
+                &.links {
+                    font-size: @linksSize;
+                }
+            }
+        }
+        ul.options {
+            list-style-type: none;
+            padding-top: 1em;
+            margin-left: 0;
+            li {
+                display: block;
+                margin: 0.5em 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    font-size: @buttonSize;
+                    line-height: @buttonLineHeight;
+                    font-weight: bold;
+                    .defaultButtonStyles;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                li {
+                    display: inline-block;
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+.central-layout-no-image {
+    &:before {
+        content: @watermarkContent;
+        color: @watermarkColor;
+        font-size: @watermarkSize * 0.5;
+        font-weight: bold;
+        line-height: 0.79em;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -10;
+    }
+    @media screen and (min-width: @breakPointOne) {
+        &:before {
+            font-size: @watermarkSize * 0.666;
+        }
+    }
+    @media screen and (min-width: @breakPointTwo) {
+        &:before {
+            font-size: @watermarkSize;
+        }
+    }
+    text-align: center;
+    padding-bottom: 7em;
+    div.banner {
+        position: relative;
+        background-size: cover;
+        padding-top: 15em;
+        overflow: hidden;
+        h1, h2, h3, h4, h5, h6 {
+            color: @headerColorNoImage;
+            font-weight: normal;
+            font-size: @headerFontSize * 0.5;
+            line-height: 0.8em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        @media screen and (min-width: @breakPointOne) {
+            padding-top: 20em;
+            h1, h2, h3, h4, h5, h6 {
+                font-size: @headerFontSize * 0.75;
+            }
+        }
+        @media screen and (min-width: @breakPointTwo) {
+            padding-top: 25em;
+            h1, h2, h3, h4, h5, h6 {
+                font-size: @headerFontSize;
+            }
+        }
+    }
+    div.content {
+        width: 90%;
+        max-width: @contentWidth;
+        margin: auto;
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            &.whoops {
+                color: @whoopsColor;
+                font-size: 2.250em;
+                line-height: 1.111em;
+                font-size: @whoopsSize * 0.75;
+                padding-top: 2em;
+            }
+            &.sorry {
+                font-size: @sorrySize * 0.75;
+                line-height: @sorryLineHeight;
+                margin-bottom: 0.5em;
+                width: 70%;
+            }
+            &.links {
+                font-size: @linksSize * 0.75;
+                line-height: @linksLineHeight;
+            }
+            &.sorry, &.links {
+                color: @pColor;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                &.whoops {
+                    font-size: @whoopsSize * 0.87;
+                }
+                &.sorry {
+                    font-size: @sorrySize * 0.87;
+                    width: 60%;
+                }
+                &.links {
+                    font-size: @linksSize * 0.87;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                &.whoops {
+                    font-size: @whoopsSize;
+                }
+                &.sorry {
+                    font-size: @sorrySize;
+                    width: 35%;
+                }
+                &.links {
+                    font-size: @linksSize;
+                }
+            }
+        }
+        ul.options {
+            list-style-type: none;
+            padding-top: 1em;
+            margin-left: 0;
+            li {
+                display: block;
+                a {
+                    font-size: @buttonSize;
+                    line-height: @buttonLineHeight;
+                    font-weight: bold;
+                    .defaultButtonStyles;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                li {
+                    display: inline-block;
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+.left-aligned-layout-no-image {
+    &:before {
+        content: @watermarkContent;
+        color: @watermarkColor;
+        font-size: @watermarkSize * 0.5;
+        font-weight: bold;
+        line-height: 0.79em;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -10;
+    }
+    @media screen and (min-width: @breakPointOne) {
+        &:before {
+            font-size: @watermarkSize * 0.666;
+        }
+    }
+    @media screen and (min-width: @breakPointTwo) {
+        &:before {
+            font-size: @watermarkSize;
+        }
+    }
+    text-align: left;
+    padding-bottom: 7em;
+    div.banner {
+        background-size: cover;
+        overflow: hidden;
+        padding-left: 5%;
+        padding-right: 5%;
+        .container {
+            position: relative;
+            padding-top: 20em;
+            width: @contentWidth;
+            margin: 0 auto;
+            h1, h2, h3, h4, h5, h6 {
+                color: @headerColorNoImage;
+                font-weight: bold;
+                font-size: @headerFontSize * 0.5;
+                line-height: 0.8em;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                padding-top: 20em;
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: @headerFontSize * 0.75;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                padding-top: 25em;
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: @headerFontSize;
+                }
+            }
+        }
+    }
+    div.content {
+        width: 90%;
+        max-width: @contentWidth;
+        margin: auto;
+        p {
+            &.whoops {
+                color: @whoopsColor;
+                font-size: @whoopsSize * 0.75;
+                line-height: @whoopsLineHeight;
+                font-weight: bold;
+                padding-top: 2em;
+            }
+            &.sorry {
+                font-size: @sorrySize * 0.75;
+                line-height: @sorryLineHeight;
+                margin-bottom: 0.5em;
+                width: 35%;
+            }
+            &.links {
+                font-size: @linksSize * 0.75;
+                line-height: @linksLineHeight;
+            }
+            &.sorry, &.links {
+                color: @pColor;
+            }
+            @media screen and (min-width: @breakPointOne) {
+                &.whoops {
+                    font-size: @whoopsSize * 0.87;
+                }
+                &.sorry {
+                    font-size: @sorrySize * 0.87;
+                    width: 60%;
+                }
+                &.links {
+                    font-size: @linksSize * 0.87;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                &.whoops {
+                    font-size: @whoopsSize;
+                }
+                &.sorry {
+                    font-size: @sorrySize;
+                    width: 35%;
+                }
+                &.links {
+                    font-size: @linksSize;
+                }
+            }
+        }
+        ul.options {
+            list-style-type: none;
+            padding-top: 1em;
+            margin-left: 0;
+            li {
+                display: block;
+                margin: 0.5em 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    font-size: @buttonSize;
+                    line-height: @buttonLineHeight;
+                    font-weight: bold;
+                    .defaultButtonStyles;
+                }
+            }
+            @media screen and (min-width: @breakPointTwo) {
+                li {
+                    display: inline-block;
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+
+// Defaults
+// -----------------------------------------------------------------------------
+.defaultBannerStyles {
+    position: relative;
+    background-image: @headerBGImage;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 15em;
+    overflow: hidden;
+}
+.defaultButtonStyles {
+    color: @whoopsColor;
+    border: 1px solid @whoopsColor;
+    padding: 0.5em 2.5em;
+    border-radius: 1em;
+    min-width: 150px;
+    text-align: center;
+    overflow: hidden;
+}
+
+// Animations
+// -----------------------------------------------------------------------------
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: @buttonHoverColor;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.hvr-shutter-out-horizontal:hover:before,
+ .hvr-shutter-out-horizontal:focus:before,
+ .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.hvr-shutter-out-horizontal:hover,
+ .hvr-shutter-out-horizontal:focus,
+ .hvr-shutter-out-horizontal:active {
+    color: @buttonTextColorHover !important;
+}

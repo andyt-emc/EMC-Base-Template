@@ -2,20 +2,20 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
 <extension version="2.5" type="template" client="site" method="upgrade">
-	
+
 	<name>EMC Base Theme</name><!-- name the template -->
 	<creationDate>2017-03-28</creationDate><!-- the date your are beginn to code -->
 	<author>Andy Taylor</author><!-- your name (oops, I repeat myself) -->
 	<copyright>Copyright © 2017 ExtraMile Communications</copyright><!-- for who you are coding -->
 	<authorEmail>andy@extramilecommunications.com</authorEmail><!-- your email address -->
 	<authorUrl>https://www.extramilecommunications.com</authorUrl><!-- your url -->
-	<version>1.0.2</version><!-- give your template a number -->
-	<description><![CDATA[ 
+	<version>1.1.0</version><!-- give your template a number -->
+	<description><![CDATA[
 		<h1>EMC Base Theme</h1>
 		<p>A clean and basic Joomla template which utlises Gulp for an improved workflow.</p>
 		<p>Created by <a href="http://www.extramilecommunications.com" target="_blank">Andy | extramilecommunications.com</a>.</p>
 	]]></description><!-- change the description as you like -->
-	
+
 	<files><!-- no need to change -->
 		<folder>css</folder>
 		<folder>images</folder>
@@ -35,7 +35,7 @@
 		<filename>favicon.ico</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
-	
+
 	<positions><!-- define the positions for modules here -->
 		<position>banner</position>
 		<position>menu</position>
@@ -66,5 +66,5 @@
 		<position>bottom4</position>
 		<position>footer</position>
 		<position>debug</position>
-	</positions>	
+	</positions>
 </extension>

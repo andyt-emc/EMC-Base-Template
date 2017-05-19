@@ -9,7 +9,7 @@
 	<copyright>Copyright © 2017 ExtraMile Communications</copyright><!-- for who you are coding -->
 	<authorEmail>andy@extramilecommunications.com</authorEmail><!-- your email address -->
 	<authorUrl>https://www.extramilecommunications.com</authorUrl><!-- your url -->
-	<version>1.1.0</version><!-- give your template a number -->
+	<version>1.2.0</version><!-- give your template a number -->
 	<description><![CDATA[
 		<h1>EMC Base Theme</h1>
 		<p>A clean and basic Joomla template which utlises Gulp for an improved workflow.</p>
@@ -21,7 +21,7 @@
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>assets</folder>
-		<folder>tpls</folder>		
+		<folder>tpls</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>

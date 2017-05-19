@@ -1,7 +1,11 @@
 <?php
 defined('_JEXEC') or die;
 ?>
-
+?>
+<?php
+$menu = & JSite::getMenu();
+if($menu->getActive() !== $menu->getDefault()) :
+?>
 <div id="mainwrap" class="clearfix">
   <div class="internal-container">
     <?php if ($this->countModules('left')) : ?>
@@ -9,7 +13,7 @@ defined('_JEXEC') or die;
         <jdoc:include type="modules" name="left" style="xhtml" />
       </div>
     <?php endif;?>
-    
+
     <div id="main">
       <?php if ($this->countModules('main')) : ?>
         <jdoc:include type="modules" name="main" style="xhtml" />
@@ -24,3 +28,6 @@ defined('_JEXEC') or die;
     <?php endif;?>
   </div>
 </div>
+
+
+<?php endif;?>

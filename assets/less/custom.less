@@ -72,71 +72,27 @@ a {
 // Menu styling
 
 #navwrap {
-background: pink
-}
-
-#logo {
-
-}
-
-#menu {
-
-	ul {
-		margin: 0;
-		padding-left: 0;
-		list-style: none;
-
-		li {
-			display: inline-block;
-
-			a, span {
-				display: block;
-				padding: .5em 1em;
-			}
-
-			&:first-child {
-				a, span {
-					padding-left: 0;
-				}
-			}
-		}
-	}
+	background: pink
 }
 
 // mobile menu styles
-@media screen and (max-width: @bp_mobileMenu) {
+#menu {
 
+}
 
+// desktop menu styles
+@media screen and (min-width: @bp_mobileMenu) {
 	#menu {
 
-		ul {
-			text-align: left;
-
-			li {
-				width: 100%;
-				display: block;
-
-				&:last-child {
-					border-bottom: none;
-				}
-
-				&:first-child {
-					a, span {
-						padding-left: 5%;
-					}
-				}
-
-				a, span {
-					padding: 1em 5%;
-					text-decoration: none;
-				}
-			}
-		}
 	}//menu	
 } // end of mobile menu styling
 
 
 // Header
+
+#logo {
+
+}
 
 #topwrap {
 	p {
@@ -155,50 +111,5 @@ background: pink
 #topwrap {
 	padding: 4em 0 3em 0;
 }
-
-.moduletable {
-	display: inline-flex;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	padding: 1em;
-	min-height: 200px;
-	border-radius: 2px;
-	border: 1px solid #e0e0e0;
-
-	p {
-		margin-bottom: 0;
-	 	font-size: 2em;
-	 	color: #333;
-	 }
-}
-
-div[id*="wrap"] {
-	margin-bottom: 1em;
-
-	.internal-container {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: stretch;
-		> div {
-			flex-grow: 1;
-		}
-	}
-}
-
-#main {
-	flex-grow: 2;
-	> div {
-		display: inline-flex;
-		width: 100%;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: center;
-		border-radius: 2px;
-    border: 1px solid #e0e0e0;
-	}
-}
-
 
 

@@ -33,14 +33,6 @@ JHtml::_('behavior.caption');
     }
 ?>
 
-<!-- <?php
-// RECOVER CUSTOM FILED NAME
-    if (isset($myCustomFields['fieldname']) and !empty($myCustomFields['fieldname'])) : ?>
-        <h4><span>Label:</span>  <?php echo $myCustomFields['fieldname']; ?></h4>
-    endif;
-?> -->
-
-
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	<?php if ($this->params->get('show_page_heading')) : ?>
